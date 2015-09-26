@@ -9,6 +9,6 @@ void func(int i, double d, const std::string& s)
 int main()
 {
 	std::thread t(func, 1,2, "James");
-	t.join()
+	t.join();
 	return 0;
 }
