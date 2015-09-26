@@ -9,7 +9,7 @@ void hello()
 int main()
 {
 	std::thread t(hello);
-	std::thread t1(std::move(t));
+	std::thread t1 = std::move(t); // 线程t移动后将不再代表任何线程。
 	t.join();
 	t1.join();
 	return 0;
